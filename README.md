@@ -42,7 +42,7 @@ To start training the model, simply run the following command:
 
      python main.py
 
-####This command will:
+###This command will:
 1. Load the data (from data/dataset.xlsx).
 2. Prepare the dataset for training.
 3. Start the training process with the model and hyperparameters defined in src/config.py.
