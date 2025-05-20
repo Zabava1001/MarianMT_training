@@ -12,6 +12,5 @@ def load_model():
 
 
 def save_model(model, tokenizer):
-
     model.save_pretrained(SAVE_PATH)
     tokenizer.save_pretrained(SAVE_PATH)

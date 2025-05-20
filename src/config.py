@@ -8,10 +8,11 @@ PROJECT_DIR = os.path.dirname(BASE_DIR)
 MODEL_PATH = os.path.join(PROJECT_DIR, 'model')
 SAVE_PATH = os.path.join(PROJECT_DIR, 'marian-ru-ha')
 DATA_PATH = os.path.join(PROJECT_DIR, 'data', 'dataset.xlsx')
+BLUE_PATH = os.path.join(PROJECT_DIR, 'data', 'dataset2.xlsx')
 OUTPUT_PATH = os.path.join(PROJECT_DIR, 'output-ru-ha')
 
 MODEL_NAME = "Helsinki-NLP/opus-mt-ru-en"
-SAMPLE_SIZE = 100
+SAMPLE_SIZE = 1000
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 

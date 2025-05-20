@@ -1,12 +1,11 @@
 import pandas as pd
 from datasets import Dataset
 from transformers import MarianTokenizer
-from config import DATA_PATH, MODEL_PATH, MAX_LENGTH, TEST_SIZE
+from src.config import DATA_PATH, MODEL_PATH, MAX_LENGTH, TEST_SIZE
 
 
-def load_data():
-    print(DATA_PATH)
-    df = pd.read_excel(DATA_PATH, header=None)
+def load_data(path=DATA_PATH):
+    df = pd.read_excel(path, header=None)
     df = df.iloc[:, :2]
 
     df.columns = ["khakas", "russian"]
