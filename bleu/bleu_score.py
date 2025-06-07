@@ -1,5 +1,5 @@
 from transformers import MarianMTModel, MarianTokenizer
-from config2 import SAVE_PATH, MAX_LENGTH, SAMPLE_SIZE, BLUE_PATH
+from src.config2 import SAVE_PATH, MAX_LENGTH, SAMPLE_SIZE, BLUE_PATH
 from src.dataset import load_data
 
 import evaluate
