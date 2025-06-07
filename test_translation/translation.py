@@ -1,5 +1,5 @@
 from transformers import MarianMTModel, MarianTokenizer
-from ../src/config2 import SAVE_PATH
+from ..src.config2 import SAVE_PATH
 import torch
 
 
