@@ -1,5 +1,5 @@
 from transformers import MarianMTModel, MarianTokenizer
-from src.config import SAVE_PATH
+from src.config2 import SAVE_PATH
 import torch
 
 
@@ -26,6 +26,6 @@ def translate(text):
     return translated_text
 
 
-russian_text = "Постановка реализуется благодаря федеральной программе «Культура малой Родины»."
+russian_text = "Чалахай иртеннең! Хакас тілі хайди даа кірерге кирек!"
 khakas_translation = translate(russian_text)
 print(f"Перевод: {khakas_translation}")

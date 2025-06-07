@@ -1,5 +1,5 @@
 from transformers import TrainingArguments, Trainer
-from config import TRAINING_ARGS
+from config2 import TRAINING_ARGS
 from dataset import load_data, tokenize_data
 from model import load_model, save_model
 

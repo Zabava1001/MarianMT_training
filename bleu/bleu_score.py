@@ -12,6 +12,7 @@ def generate_translations_batched(texts, model, tokenizer, batch_size=16, max_le
     translations = []
 
     for i in range(0, len(texts), batch_size):
+        print(i)
         batch = texts[i:i+batch_size]
         inputs = tokenizer(batch, return_tensors="pt", padding=True, truncation=True).to(device)
 
@@ -31,14 +32,17 @@ def generate_translations_batched(texts, model, tokenizer, batch_size=16, max_le
 
 model_path = SAVE_PATH
 
+print("Загрузка модели")
 model = MarianMTModel.from_pretrained(model_path, local_files_only=True)
 tokenizer = MarianTokenizer.from_pretrained(model_path, local_files_only=True)
 
+print("Загрузка датасета")
 dataset = load_data(path=BLUE_PATH)
 
 print(f"Train size: {len(dataset['train'])}")
 print(f"Test size: {len(dataset['test'])}")
 
+print("Загрузка метрики")
 bleu = evaluate.load("bleu")
 
 sample_size = SAMPLE_SIZE
@@ -51,7 +55,7 @@ translations_decoded = generate_translations_batched(
     list(random_sample['russian']),
     model,
     tokenizer,
-    batch_size=BATCH_SIZE_TRAIN,
+    batch_size=8,
     max_length=MAX_LENGTH,
     device="cuda" if torch.cuda.is_available() else "cpu"
 )

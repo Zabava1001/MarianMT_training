@@ -1,5 +1,5 @@
 from transformers import MarianMTModel, MarianTokenizer
-from config import MODEL_PATH, SAVE_PATH, device
+from config2 import MODEL_PATH, SAVE_PATH, device
 
 
 def load_model():
