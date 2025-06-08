@@ -1,6 +1,12 @@
 import pandas as pd
 from datasets import Dataset
 from transformers import MarianTokenizer
+
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 from src.config2 import DATA_PATH, MODEL_PATH, MAX_LENGTH, TEST_SIZE
 
 
