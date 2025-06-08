@@ -17,7 +17,6 @@ def generate_translations_batched(texts, model, tokenizer, batch_size=16, max_le
     translations = []
 
     for i in range(0, len(texts), batch_size):
-        print(i)
         batch = texts[i:i+batch_size]
         inputs = tokenizer(batch, return_tensors="pt", padding=True, truncation=True).to(device)
 
