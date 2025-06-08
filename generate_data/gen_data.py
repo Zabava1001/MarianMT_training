@@ -1,4 +1,10 @@
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 from transformers import MarianMTModel, MarianTokenizer
+
 from src.config2 import SAVE_PATH, MAX_LENGTH, BLUE_PATH
 from src.dataset import load_data
 
