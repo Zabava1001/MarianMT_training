@@ -1,7 +1,7 @@
 from transformers import TrainingArguments, Trainer
-from config2 import TRAINING_ARGS
-from dataset import load_data, tokenize_data
-from model import load_model, save_model
+from src.config2 import TRAINING_ARGS
+from src.dataset import load_data, tokenize_data
+from src.model import load_model, save_model
 
 
 dataset = load_data()

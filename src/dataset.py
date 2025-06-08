@@ -1,7 +1,7 @@
 import pandas as pd
 from datasets import Dataset
 from transformers import MarianTokenizer
-from config2 import DATA_PATH, MODEL_PATH, MAX_LENGTH, TEST_SIZE
+from src.config2 import DATA_PATH, MODEL_PATH, MAX_LENGTH, TEST_SIZE
 
 
 def load_data(path=DATA_PATH):
